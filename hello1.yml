@@ -1,0 +1,29 @@
+name : firstone
+
+on: push
+
+jobs:
+    job1:
+        name: first job
+        runs-on: windows-latest
+        steps:
+            - name: step one
+              uses: actions/checkout@v2
+            - name: step two 
+              run: "get-ChildItem Env:" 
+
+
+    job3:
+        name: third job
+        runs-on: windows-latest
+        steps:
+            - name : step one
+              uses: actions/checkout@v2
+            - name : step two 
+              run : dir
+           
+    
+    
+  
+
+    
