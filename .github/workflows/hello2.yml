@@ -19,7 +19,7 @@ jobs:
          - name: stepone
            uses: actions/checkout@v2
          - name: steptwo
-           run: ls -l            
+           run: pwd            
 
  
 
