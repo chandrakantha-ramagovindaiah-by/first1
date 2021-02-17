@@ -1,0 +1,25 @@
+name: tra2
+
+on: 
+   push: 
+      branches:
+          - develop
+
+jobs: 
+    job1:
+         name: tra2-job
+         runs-on: windows-latest
+         steps:
+             - name: step one
+               uses: actions/checkout@v2
+             - name: step two 
+               run: dir
+
+    job2:
+         name: first-job
+         runs-on: ubuntu-latest
+         steps:
+         - name: stepone
+           uses: actions/checkout@v2
+         - name: steptwo
+           run: pwd  
