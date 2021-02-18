@@ -1,25 +1,14 @@
-name: tra2
+name: python application 
 
-on: 
-   push: 
-      branches:
-          - develop
+on: push
 
-jobs: 
-    job1:
-         name: tra2-job
-         runs-on: windows-latest
-         steps:
-             - name: step one
-               uses: actions/checkout@v2
-             - name: step two 
-               run: dir
-
-    job2:
-         name: first-job
-         runs-on: ubuntu-latest
-         steps:
-         - name: stepone
-           uses: actions/checkout@v2
-         - name: steptwo
-           run: pwd  
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps: 
+      - name: checkout out the code
+        uses: actions/checkout@v2
+      - name: Python Syntax Checker  
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
+        
+        
